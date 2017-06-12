@@ -1,0 +1,49 @@
+<!--<div class="">-->
+  <!--<div class="col-md-12 nopadding text-xl-center">-->
+    <!--<p class="date caption-white">14 октября<span class="date-time caption-gray">22:00</span></p>-->
+  <!--</div>-->
+  <!--<div class="col-md-12 nopadding text-xl-center">-->
+    <!--<span class="rate strong blue">Newbee</span>-->
+    <!--<img src="http://api.randomuser.me/portraits/men/2.jpg" alt="Scott Stevens" class="img-thumbnail">-->
+    <!--<span class="vs"></span>-->
+    <!--<img src="http://api.randomuser.me/portraits/men/3.jpg" alt="Scott Stevens" class="img-thumbnail">-->
+    <!--<span class="rate strong blue">Na’Vi</span>-->
+  <!--</div>-->
+  <!--<div class="clearfix"></div>-->
+<!--</div>-->
+<!--<h4 class="text-xl-center">Следующие даты</h4>-->
+<ul class="list-group">
+  <li *ngFor="let match of matches" class="list-group-item">
+    <div class="col-md-10 nopadding text-xl-center">
+      <div class="col-sm-12">{{match.title}}</div>
+      <span class="user-name blue">{{match.compA_name}}</span>
+      <img [src]="match.compA_flag" [attr.alt]="match.compA_name" class="img-thumbnail">
+      <span class="puny puny-vs">{{match.scoreA}} vs {{match.scoreB}}</span>
+      <img [src]="match.compB_flag" [attr.alt]="match.compB_name" class="img-thumbnail">
+      <span class="user-name blue">{{match.compB_name}}</span>
+    </div>
+    <div class="col-md-2 nopadding text-xl-center">
+      <p class="date puny">{{getTime(match.start || match.end)}}</p>
+      <!--<p class="date puny">14.10</p>-->
+      <!--<p class="date-time puny">22:00</p>-->
+    </div>
+
+    <div class="clearfix"></div>
+  </li>
+</ul>
+<div class="widget-footer">
+  <span class="icon icon-info"></span>
+  <p class="see-all blue"><a href="#">Полный список команд</a></p>
+</div>
+
+
+
+<!--<div *ngFor="let futureMatche of matches">-->
+  <!--<div [innerHTML]="futureMatche.title"></div>-->
+  <!--<span [innerHTML]="futureMatche.compA_name"></span>-->
+  <!--<span [innerHTML]="futureMatche.compB_name"></span>-->
+  <!--<div>-->
+    <!--<span [innerHTML]="futureMatche.scoreA"></span>-->
+    <!--<span [innerHTML]="futureMatche.scoreB"></span>-->
+  <!--</div>-->
+<!--</div>-->

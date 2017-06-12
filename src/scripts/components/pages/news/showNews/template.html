@@ -1,0 +1,79 @@
+<div *ngFor="let singleNews of news" class="col-md-12 news-add">
+
+  <div class="news-head clearfix">
+    <div class="col-md-2 nopadding clearfix">
+      <div class="mr-1 pull-left">
+        <img [src]="userInformationService.showUserProfileAvatar()" class="img-responsive" alt="">
+      </div>
+      <h4 class="blue">{{ userInformationService.userInformation?.name }}</h4>
+      <p class="puny mb-0">{{ getTime(singleNews.created_at) }}</p>
+    </div>
+    <div class="col-md-2 offset-md-8 nopadding text-right clearfix">
+      <span class="dropdown-menu-dots"></span>
+    </div>
+  </div>
+
+  <div class="news-body clearfix nopadding">
+    <div class="block-info">
+      <div class="block-info-image" [ngStyle]="getNewsStyles(singleNews)">
+        <div class="tags">
+          <a
+            *ngFor="let tag of singleNews.tags"
+            [routerLink]="['/search', {tags: tag.name || tag }]"
+            class="label label-info"
+          >
+            {{ tag.name || tag }}
+          </a>
+        </div>
+
+        <div class="block-info-content">
+          <h1 *ngIf="singleNews.title" [innerHTML]="singleNews.title"></h1>
+          <div class="block-info-text body mb-0">
+            <div *ngFor="let content of (singleNews.content | newsVideoChanger).split(SPLIT_VIDEO_CONTENT_BY)">
+              <div
+                *ngIf="isContentHTML(content)"
+                [innerHTML]="sanitizer.bypassSecurityTrustHtml(content)"
+              ></div>
+              <img *ngIf="isContentImg(content)" [src]="getImageUrl(content)" (click)="handlePlayVideoClick(content)"/>
+            </div>
+
+            <a class="block-info-more" routerLink="/news/{{singleNews.id}}">читать дальше</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="news-footer clearfix ">
+    <div class="col-md-6 nopadding clearfix">
+      <span class="comment caption"><i class="icon-comment"></i>22</span>
+      <span class="viewed caption"><i class="icon-eye"></i>{{ singleNews.views_count }}</span>
+    </div>
+    <div class="col-md-6 nopadding clearfix text-right">
+      <span
+        (click)="newsService.likeNews(singleNews.id)"
+        class="btn comment caption"
+      >
+        <i class="icon-like"></i> {{singleNews.like_count}}
+      </span>
+      <template #whoSharedContainer>
+        <span *ngFor="let user of whoShared(singleNews.id)">
+          <!--<img [src]="user.avatar" [alt]="user.nickname"/>-->
+          {{user.nickname}}
+        </span>
+      </template>
+      <button
+        (click)="newsService.shareNews(singleNews.id)"
+        triggers="mouseenter:mouseleave"
+        class="btn viewed caption">
+        <i class="icon-share"></i>{{ singleNews.share_count }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<news-video-popup
+  *ngIf="showVideo && activeVideoUrl"
+  [activeVideoUrl]="activeVideoUrl"
+  (hideVideoPopup)="newsVideoPopupClose($event)"
+></news-video-popup>

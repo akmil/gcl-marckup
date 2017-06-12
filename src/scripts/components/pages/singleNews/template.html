@@ -1,0 +1,30 @@
+<a
+  routerLink="/"
+  class="btn btn-secondary col-xs-12 col-md-12"
+  role="button"
+>
+  {{lS.userLocalization?.pages.news.backBtn}}
+</a>
+<div class="col-xs-12 col-md-12">
+  <div class="row">
+    <h2 class="col-xs-12">{{lS.userLocalization?.pages.news.title}}</h2>
+
+    <div class="col-xs-6 col-lg-4">
+      <h5 [innerHTML]="title"></h5>
+      <p [innerHTML]="contentHTML"></p>
+    </div>
+
+  </div>
+</div>
+<div *ngFor="let comments of newsService.newsComments">
+  <p [innerHTML]="comments.comment"></p>
+</div>
+<form
+  *ngIf="authService.isAuth"
+  (ngSubmit)="addComment(addCommentForm)"
+  #addCommentForm="ngForm"
+  class="col-xs-12 col-md-12"
+>
+  <textarea class="col-xs-8 col-md-8" name="comment" ngModel placeholder="Comment"> </textarea>
+  <button class="col-xs-4 col-md-4" type="submit"> Add Comment</button>
+</form>

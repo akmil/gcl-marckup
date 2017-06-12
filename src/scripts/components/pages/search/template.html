@@ -1,0 +1,8 @@
+<rl-tag-input
+  [(ngModel)]="tags"
+  (removeTag)="filterNews(tags)"
+  (addTag)="filterNews(tags)"
+  placeholder="Поиск по тегам"
+>
+</rl-tag-input>
+<show-news [news]="filteredNews"></show-news>

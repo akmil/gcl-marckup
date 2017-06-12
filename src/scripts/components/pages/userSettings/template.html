@@ -1,0 +1,55 @@
+<div>
+  <h2>{{ lS.userLocalization?.pages.settings.title }}</h2>
+  <form class="form-horizontal clearfix" enctype="multipart/form-data" (ngSubmit)="saveSettings(f)" #f="ngForm">
+
+    <label class="btn btn-primary">
+      {{ lS.userLocalization?.pages.settings.upload_avatar }}
+      <input type="file" style="display: none;" (change)="uploadAvatar($event)">
+    </label>
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="button" (click)="updateStats()" [disabled]="!userInformation.isManualUpdate">{{ lS.userLocalization?.actions.update_game_stats }}</button>
+    </div>
+
+    <div class="form-group">
+      <label>{{ lS.userLocalization?.pages.settings.email }}</label>
+      <input type="text" name="email" class="form-control" ngModel="{{ userInformation.userInformation?.email }}" required>
+    </div>
+
+    <h4>{{ lS.userLocalization?.pages.settings.password }}</h4>
+
+    <div class="clearfix row">
+      <div class="form-group col-md-4">
+        <label>{{ lS.userLocalization?.pages.settings.old_password }}</label>
+        <input type="password" name="old_password" class="form-control" ngModel>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>{{ lS.userLocalization?.pages.settings.new_password }}</label>
+        <input type="password" name="new_password" class="form-control" ngModel>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>{{ lS.userLocalization?.pages.settings.new_password_repeat }}</label>
+        <input type="password" name="new_password_repeat" class="form-control" ngModel>
+      </div>
+    </div>
+
+    <h4>{{ lS.userLocalization?.pages.settings.about }}</h4>
+
+    <div class="clearfix row">
+      <div class="form-group col-md-6">
+        <label>{{ lS.userLocalization?.pages.settings.nickname }}</label>
+        <input type="text" name="name" class="form-control" ngModel="{{ userInformation.userInformation?.nickname }}">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>{{ lS.userLocalization?.pages.settings.name }}</label>
+        <input type="text" name="nickname" class="form-control" ngModel="{{ userInformation.userInformation?.name }}">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{ lS.userLocalization?.actions.save }}</button>
+
+  </form>
+</div>

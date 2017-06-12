@@ -1,0 +1,37 @@
+<div *ngIf="authService.isAuth" class="col-md-12 news-add news-add-publication">
+  <h2 class="">{{ lS.translateByKey('pages.news.addNews.content') }}: </h2>
+
+  <div class="submit_news_box clear_fix">
+    <div id="submit_news_error" class="error"></div>
+
+    <div class="news_input">
+      <form (ngSubmit)="addNews(addNewsForm)" #addNewsForm="ngForm">
+        <input name="content" ngModel class="news_content" type="text" placeholder="Что расскажете?"/>
+        <button style="position: absolute; left: -9999px" type="submit"></button>
+        <div class="news_add_media">
+          <div class="media_selector clear_fix">
+            <button class="ms_item ms_item_photo" tabindex="0" data-title="Фотография" aria-label="Фотография" role="link"></button>
+            <button class="ms_item ms_item_video" tabindex="0" data-title="Видеозапись" aria-label="Видеозапись" role="link"></button>
+            <button class="ms_item ms_item_audio" tabindex="0" data-title="Аудиозапись" aria-label="Аудиозапись" role="link"></button>
+            <button
+              class="ms_item ms_item_edit"
+              tabindex="0"
+              data-title="Редактировать"
+              aria-label="Редактировать"
+              role="link"
+              (click)="showAddNewsModal()"
+            ></button>
+            <button class="ms_item ms_item_shape" tabindex="0" data-title="Другое" aria-label="Другое" role="link"></button>
+          </div>
+        </div>
+      </form>
+      <rl-tag-input
+        [(ngModel)]="tags"
+        placeholder="Теги"
+      >
+      </rl-tag-input>
+
+    </div>
+  </div>
+
+</div>

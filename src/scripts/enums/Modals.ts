@@ -1,0 +1,6 @@
+export enum Modals {
+  REGISTRATION,
+  LOGIN,
+  CONFIRM_EMAIL,
+  ADD_NEWS_MODAL
+}
