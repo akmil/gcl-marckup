@@ -143,6 +143,7 @@ button:focus,
     background-color: $cornflower;
     border: solid 2px $cornflower;
     &:active,
+    &:active:focus,
     &:focus,
     &:hover {
       color: $mako;
@@ -156,6 +157,7 @@ button:focus,
     border: solid 2px $cornflower-dark;
     background-color: $shark;
     &:active,
+    &:active:focus,
     &:focus,
     &:hover {
       color: $cornflower;
@@ -168,6 +170,7 @@ button:focus,
     background-color: transparent;
     border: solid 2px transparent;
     &:active,
+    &:active:focus,
     &:focus,
     &:hover {
       color: $cornflower;
@@ -189,6 +192,8 @@ button:focus,
     padding-left: 4px;
   }
 }
+
+
 .form-control {
   border: 0;
   border-radius: 0;

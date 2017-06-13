@@ -1,1 +1,0 @@
-{"version":3,"file":"LeaguesList.js","sourceRoot":"","sources":["LeaguesList.ts"],"names":[],"mappings":";;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAO1C;IACE,qBAAmB,cAA8B;QAA9B,mBAAc,GAAd,cAAc,CAAgB;IAAG,CAAC;IALvD;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,aAAa;YACvB,WAAW,EAAE,eAAe;SAC7B,CAAC;mBAAA;IAGF,kBAAC;AAAD,CAAC,AAFD,IAEC;AAFY,mBAAW,cAEvB,CAAA"}

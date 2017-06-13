@@ -1,4 +1,5 @@
-modal-adapter {
+.modal-adapter
+ {
   .modal {
     display: block !important;
     overflow: auto;
@@ -40,6 +41,13 @@ modal-adapter {
           width: 40px;
           height: auto;
         }
+      }
+      textarea {
+        border: solid 1px $riverBed;
+      }
+      .modal-body {
+        padding-bottom: 0;
+
       }
     }
 
@@ -116,5 +124,14 @@ modal-adapter {
     }
   }
 
+  .dropdown-menu-dots {
+    content: '';
+    width: 10px;
+    height: 22px;
+    display: block;
+    float: right;
+    background: url($assetPath + '/img/icons/side-menu.png') no-repeat;
+    cursor: pointer;
+  }
 
 }
