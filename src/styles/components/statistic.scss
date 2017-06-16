@@ -72,5 +72,21 @@
       transform: scale(1.2);
     }
   }
-
+  .table {
+    table-layout: fixed;
+    tbody td:nth-child(2) {
+      max-width: 170px;
+    }
+    .table-row-detail {
+      &-cell:first-child {
+        padding-left: 116px;
+      }
+      &-row:first-child {
+        margin-bottom: 1rem;
+      }
+      &-value {
+        //color: $iron;
+      }
+    }
+  }
 }

@@ -629,7 +629,7 @@
 
       <div class="col-md-4 hidden-sm-down">
 
-        <!--component widget-add-friends -->
+      <!--component widget-add-friends -->
         <div class="widget  widget-friends">
           <div class="widget-content">
             <div class="input-group">
@@ -664,12 +664,12 @@
         </div>
       <!--END component widget-add-friends -->
 
-
+      <!--widget-games-->
       <div class="widget widget-games mt-1">
         <div class="col-md-12 widget-navigation nopadding">
           <ul class="nav nav-tabs justify-content-center">
             <li class="nav-item" [class.active]="isActiveFutureWidget()">
-              <a class="nav-link" (click)="handleSetActiveFutureWidgetHandle()">Ближайшие матчи</a>
+              <a class="nav-link active" (click)="handleSetActiveFutureWidgetHandle()">Ближайшие матчи</a>
             </li>
             <li class="nav-item" [class.active]="isActiveCurrentWidget()">
               <a class="nav-link" (click)="handleSetActiveCurrentWidgetHandle()">Прошедшие матчи</a>
@@ -679,9 +679,77 @@
         <div class="clearfix"></div>
 
         <div class="widget-content">
-          <matches [isFuture]="isActiveFutureWidget()" [matchesCount]="5"></matches>
+          <!--<matches [isFuture]="isActiveFutureWidget()" [matchesCount]="5"></matches>-->
+          <div class="">
+            <div class="col-md-12 nopadding text-xl-center">
+              <p class="date caption-white">14 октября<span class="date-time caption-gray">22:00</span></p>
+            </div>
+            <div class="col-md-12 nopadding text-xl-center">
+              <span class="rate strong blue">Newbee</span>
+              <img src="http://api.randomuser.me/portraits/men/2.jpg" alt="Scott Stevens" class="img-thumbnail">
+              <span class="vs"></span>
+              <img src="http://api.randomuser.me/portraits/men/3.jpg" alt="Scott Stevens" class="img-thumbnail">
+              <span class="rate strong blue">Na’Vi</span>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <h4 class="text-xl-center">Следующие даты</h4>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="col-md-10 nopadding text-xl-center">
+                <span class="user-name blue">Newb</span>
+                <img src="http://api.randomuser.me/portraits/men/10.jpg" alt="Scott Stevens" class="img-thumbnail">
+                <span class="puny puny-vs">vs</span>
+                <img src="http://api.randomuser.me/portraits/men/1.jpg" alt="Scott Stevens" class="img-thumbnail">
+                <span class="user-name blue">Na’Vi</span>
+              </div>
+              <div class="col-md-2 nopadding text-xl-center">
+                <p class="date puny">14.10</p>
+                <p class="date-time puny">22:00</p>
+              </div>
+
+              <div class="clearfix"></div>
+            </li>
+            <li class="list-group-item">
+              <div class="col-md-10 nopadding text-xl-center">
+                <span class="user-name blue">Newb</span>
+                <img src="http://api.randomuser.me/portraits/men/10.jpg" alt="Scott Stevens" class="img-thumbnail">
+                <span class="puny puny-vs">vs</span>
+                <img src="http://api.randomuser.me/portraits/men/1.jpg" alt="Scott Stevens" class="img-thumbnail">
+                <span class="user-name blue">Na’Vi</span>
+              </div>
+              <div class="col-md-2 nopadding text-xl-center">
+                <p class="date puny">14.10</p>
+                <p class="date-time puny">22:00</p>
+              </div>
+
+              <div class="clearfix"></div>
+            </li>
+            <li class="list-group-item">
+              <div class="col-md-10 nopadding text-xl-center">
+                <span class="user-name blue">Newb</span>
+                <img src="http://api.randomuser.me/portraits/men/10.jpg" alt="Scott Stevens" class="img-thumbnail">
+                <span class="puny puny-vs">vs</span>
+                <img src="http://api.randomuser.me/portraits/men/1.jpg" alt="Scott Stevens" class="img-thumbnail">
+                <span class="user-name blue">Na’Vi</span>
+              </div>
+              <div class="col-md-2 nopadding text-xl-center">
+                <p class="date puny">14.10</p>
+                <p class="date-time puny">22:00</p>
+              </div>
+              <div class="clearfix"></div>
+            </li>
+
+          </ul>
+
+          <div class="widget-footer">
+            <span class="icon icon-info"></span>
+            <p class="see-all blue"><a href="#">Полный список команд</a></p>
+          </div>
+
         </div>
       </div>
+      <!--END widget-games-->
 
       <!--component widget-players-rate -->
       <div class="widget widget-players-rate">

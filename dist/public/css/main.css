@@ -1,4 +1,5 @@
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css");
 @import url("../../static/common/css/ng2-toastr.css");
 /*common*/
 /*ubuntu*/
@@ -4790,16 +4791,17 @@ table styles is in : table-common.scss
   text-align: center;
   position: relative;
   margin: 0 auto 30px;
-  height: 140px;
+  height: 120px;
   width: 140px; }
 .stats-radial-diagram .hexagon {
   height: 100%;
-  width: calc(100% * 0.57735);
-  display: inline-block; }
+  width: calc(100%);
+  display: inline-block;
+  transform: rotate(30deg); }
   .stats-radial-diagram .hexagon:before {
     position: absolute;
     top: 0;
-    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    right: calc((100% / 2) - ((100%) / 2));
     background-color: inherit;
     height: inherit;
     width: inherit;
@@ -4808,7 +4810,7 @@ table styles is in : table-common.scss
   .stats-radial-diagram .hexagon:after {
     position: absolute;
     top: 0;
-    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    right: calc((100% / 2) - ((100%) / 2));
     background-color: inherit;
     height: inherit;
     width: inherit;
@@ -4879,6 +4881,14 @@ table styles is in : table-common.scss
     margin-top: 6px; }
   .statistic .card i.icon-medal:before {
     transform: scale(1.2); }
+.statistic .table {
+  table-layout: fixed; }
+  .statistic .table tbody td:nth-child(2) {
+    max-width: 170px; }
+  .statistic .table .table-row-detail-cell:first-child {
+    padding-left: 116px; }
+  .statistic .table .table-row-detail-row:first-child {
+    margin-bottom: 1rem; }
 
 /*pages*/
 

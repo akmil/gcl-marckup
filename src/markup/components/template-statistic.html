@@ -559,106 +559,192 @@
           </div>
           <div class="wrapper-block">
             <div class="row">
-              <div class="col-md-12">
-              <div class="table-box-content">
-                <table class="table table-main toggle-arrow-tiny">
-                  <thead>
-                  <tr>
-                    <th class="table-hidden" colspan="2">Игрок</th>
-                    <th class="">Rate</th>
-                    <th class="">% wins</th>
-                    <th class="">KDA K/D/A</th>
-                    <th class="table-hidden"></th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>
-                      <span class="table-toggle active"></span>
-                      <img alt="Scott Stevens" class="img-thumbnail img-circle" src="http://api.randomuser.me/portraits/men/19.jpg">
-                    </td>
-                    <td>
-                      <p class="blue base">Patrick Smith</p>
-                      <p>Bradley Rodriquez</p>
-                      <p><img alt="flag" class="img-thumbnail img-width-16" src="https://img.abiosgaming.com/flags/Malaysia.png"></p>
-                    </td>
-                    <td>233</td>
-                    <td class="table-visible green">46%</td>
-                    <td ><span class="orange">5.03</span>(<span class="red">13.1</span>/ 4.7 /<span class="green">10.4</span>)</td>
-                    <td>
-                      <span class="dropdown-menu-dots"></span>
-                      <div class="align-middle dropdown">
-                        <div aria-labelledby="dropdownMenuButton" class="dropdown-menu d-block">
-                          <a class="link dropdown-item caption" href="#">Написать сообщение</a>
-                          <a class="link dropdown-item caption" href="#">Добавить в друзья</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="table-row-detail">
-                    <td></td>
-                    <td class="table-row-detail-cell">
-                      <div class="table-row-detail-inner">
-                        <div class="table-row-detail-row">
-                          <span class="table-row-detail-name">Команда:</span>
-                          <span class="table-row-detail-value">с 24 авг,2016</span>
-                        </div>
-                        <div class="table-row-detail-row">
-                          <img alt="flag" class="img-thumbnail img-width-32" src="https://img.abiosgaming.com/flags/Malaysia.png">
-                          <span class="table-row-detail-value blue">Infamous</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="table-row-detail-cell" colspan="4">
-                      <div class="table-row-detail-inner">
-                        <div class="table-row-detail-row">
-                          <span class="table-row-detail-name">Роль в команде:</span>
-                        </div>
-                        <div class="table-row-detail-row">
-                          <span class="table-row-detail-value">Капитан, Поддержка</span>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span class="table-toggle"></span>
-                      <img alt="Scott Stevens" class="img-thumbnail img-circle" src="http://api.randomuser.me/portraits/men/20.jpg">
-                    </td>
-                    <td>
-                      <p class="blue base">Patrick Smith</p>
-                      <p>Bradley Rodriquez</p>
-                      <p><img alt="flag" class="img-thumbnail img-width-16" src="https://img.abiosgaming.com/flags/Malaysia.png"></p>
-                    </td>
-                    <td>233</td>
-                    <td class="table-visible green">46%</td>
-                    <td ><span class="orange">5.03</span>(<span class="red">13.1</span>/ 4.7 /<span class="green">10.4</span>)</td>
-                    <td>
-                      <span class="dropdown-menu-dots"></span>
+              <div class="col-md-12 text-center mb-1">
+                <ul class="nav nav-pills selector">
+                  <li class="active"><a class="link">Последний день</a></li>
+                  <li><a class="link">Последняя неделя</a></li>
+                  <li><a class="link">Месяц</a></li>
+                  <li><a class="link">Квартал</a></li>
+                </ul>
+              </div>
 
-                    </td>
-                  </tr>
-                  <tr class="table-row-detail" style="display: none">
-                    <td></td>
-                    <td>...Details here</td>
-                  </tr>
-                  </tbody>
-                  <!--<tfoot>
+              <div class="col-md-12">
+                <div class="table-box-content">
+                  <table class="table table-main toggle-arrow-tiny">
+                    <thead>
                     <tr>
-                      <td colspan="5" class="table-visible">
-                        <ul class="pagination pull-right">
-                          <li class="table-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
-                          <li class="table-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li>
-                          <li class="table-page active"><a data-page="0" href="#">1</a></li>
-                          <li class="table-page"><a data-page="1" href="#">2</a></li>
-                          <li class="table-page-arrow"><a data-page="next" href="#next">›</a></li>
-                          <li class="table-page-arrow"><a data-page="last" href="#last">»</a></li>
-                        </ul>
+                      <th class="table-hidden" colspan="2">Игрок</th>
+                      <th class="">Rate</th>
+                      <th class="">% wins</th>
+                      <th class="">KDA K/D/A</th>
+                      <th class="table-hidden"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td colspan="2">
+                        <div class="float-left mr-1">
+                          <span class="table-toggle active"></span>
+                          <img alt="Scott Stevens" class="img-thumbnail img-circle" src="http://api.randomuser.me/portraits/men/19.jpg">
+                        </div>
+                        <div>
+                          <p class="blue base">Patrick Smith </p>
+                          <p class="gray-light">Bradley Rodriquez</p>
+                          <p><img alt="flag" class="img-thumbnail img-width-16" src="https://img.abiosgaming.com/flags/Malaysia.png"></p>
+                        </div>
+                      </td>
+                      <td>233</td>
+                      <td class="table-visible green">46%</td>
+                      <td ><span class="orange">5.03</span>(<span class="red">13.1</span>/ 4.7 /<span class="green">10.4</span>)</td>
+                      <td>
+                        <span class="dropdown-menu-dots"></span>
+                        <div class="align-middle dropdown">
+                          <div aria-labelledby="dropdownMenuButton" class="dropdown-menu d-block">
+                            <a class="link dropdown-item caption" href="#">Написать сообщение</a>
+                            <a class="link dropdown-item caption" href="#">Добавить в друзья</a>
+                          </div>
+                        </div>
                       </td>
                     </tr>
-                  </tfoot>-->
-                </table>
-              </div>
+                    <tr class="table-row-detail">
+                      <td class="table-row-detail-cell" colspan="2">
+                        <div class="table-row-detail-inner">
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-name">Команда:</span>
+                            <span class="table-row-detail-value puny gray-light">с 24 авг,2016</span>
+                          </div>
+                          <div class="table-row-detail-row">
+                            <img alt="flag" class="img-thumbnail img-width-32" src="https://img.abiosgaming.com/flags/Malaysia.png">
+                            <span class="table-row-detail-value blue">Infamous</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="table-row-detail-cell" colspan="4">
+                        <div class="table-row-detail-inner">
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-name">Роль в команде:</span>
+                          </div>
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-value gray-light">Капитан, Поддержка</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <div class="float-left mr-1">
+                          <span class="table-toggle"></span>
+                          <img alt="Scott Stevens" class="img-thumbnail img-circle" src="http://api.randomuser.me/portraits/men/20.jpg">
+                        </div>
+                        <div>
+                          <p class="blue base">Patrick Smith </p>
+                          <p class="gray-light">Bradley Rodriquez</p>
+                          <p><img alt="flag" class="img-thumbnail img-width-16" src="https://img.abiosgaming.com/flags/Malaysia.png"></p>
+                        </div>
+                      </td>
+                      <td>238</td>
+                      <td class="table-visible green">46,25 %</td>
+                      <td ><span class="orange">5.03</span>(<span class="red">13.1</span>/ 4.7 /<span class="green">10.4</span>)</td>
+                      <td>
+                        <span class="dropdown-menu-dots"></span>
+                        <div class="align-middle dropdown" style="display: none">
+                          <div aria-labelledby="dropdownMenuButton" class="dropdown-menu d-block">
+                            <a class="link dropdown-item caption" href="#">Написать сообщение</a>
+                            <a class="link dropdown-item caption" href="#">Добавить в друзья</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="table-row-detail" style="display: none">
+                      <td class="table-row-detail-cell" colspan="2">
+                        <div class="table-row-detail-inner">
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-name">Команда:</span>
+                            <span class="table-row-detail-value puny gray-light">с 24 авг,2016</span>
+                          </div>
+                          <div class="table-row-detail-row">
+                            <img alt="flag" class="img-thumbnail img-width-32" src="https://img.abiosgaming.com/flags/Malaysia.png">
+                            <span class="table-row-detail-value blue">Infamous</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="table-row-detail-cell" colspan="4">
+                        <div class="table-row-detail-inner">
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-name">Роль в команде:</span>
+                          </div>
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-value gray-light">Капитан, Поддержка</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <div class="float-left mr-1">
+                          <span class="table-toggle "></span>
+                          <img alt="Scott Stevens" class="img-thumbnail img-circle" src="http://api.randomuser.me/portraits/men/21.jpg">
+                        </div>
+                        <div>
+                          <p class="blue base">Patrick Smith </p>
+                          <p class="gray-light">Bradley Rodriquez</p>
+                          <p><img alt="flag" class="img-thumbnail img-width-16" src="https://img.abiosgaming.com/flags/Malaysia.png"></p>
+                        </div>
+                      </td>
+                      <td>233</td>
+                      <td class="table-visible green">46%</td>
+                      <td ><span class="orange">5.03</span>(<span class="red">13.1</span>/ 4.7 /<span class="green">10.4</span>)</td>
+                      <td>
+                        <span class="dropdown-menu-dots"></span>
+                        <div class="align-middle dropdown" style="display: none">
+                          <div aria-labelledby="dropdownMenuButton" class="dropdown-menu d-block">
+                            <a class="link dropdown-item caption" href="#">Написать сообщение</a>
+                            <a class="link dropdown-item caption" href="#">Добавить в друзья</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="table-row-detail" style="display: none">
+                      <td class="table-row-detail-cell" colspan="2">
+                        <div class="table-row-detail-inner">
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-name">Команда:</span>
+                            <span class="table-row-detail-value puny gray-light">с 24 авг,2016</span>
+                          </div>
+                          <div class="table-row-detail-row">
+                            <img alt="flag" class="img-thumbnail img-width-32" src="https://img.abiosgaming.com/flags/Malaysia.png">
+                            <span class="table-row-detail-value blue">Infamous</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="table-row-detail-cell" colspan="4">
+                        <div class="table-row-detail-inner">
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-name">Роль в команде:</span>
+                          </div>
+                          <div class="table-row-detail-row">
+                            <span class="table-row-detail-value gray-light">Капитан, Поддержка</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <!--<tfoot>
+                      <tr>
+                        <td colspan="5" class="table-visible">
+                          <ul class="pagination pull-right">
+                            <li class="table-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
+                            <li class="table-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li>
+                            <li class="table-page active"><a data-page="0" href="#">1</a></li>
+                            <li class="table-page"><a data-page="1" href="#">2</a></li>
+                            <li class="table-page-arrow"><a data-page="next" href="#next">›</a></li>
+                            <li class="table-page-arrow"><a data-page="last" href="#last">»</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tfoot>-->
+                  </table>
+                </div>
             </div>
             </div>
           </div>
