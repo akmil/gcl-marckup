@@ -14,10 +14,6 @@
     <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="UI-Elements" transform="translate(-50.000000, -1511.000000)">
             <g id="Lower-Line-Copy" transform="translate(30.000000, 1503.000000)">
-                <g id="Rectangle-3-Copy-16">
-                    <use fill="#292E33" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                </g>
                 <rect id="Rectangle-3" fill="#515C66" x="14" y="4" width="47" height="22" rx="3"></rect>
                 <path d="M28.8076923,21.5384615 C29.3615385,21.5384615 29.3615385,21.5423077 29.6269231,21.7384615 C29.8923077,21.9346154 32.9230769,24 32.9230769,24 L32.9230769,21.5384615 L33.0653846,21.5384615 C34.6884615,21.5384615 36,20.3153846 36,18.7923077 L36,10.7576923 C36,9.23461538 34.6846154,8 33.0653846,8 L22.9346154,8 C21.3153846,8 20,9.23461538 20,10.7576923 L20,18.7923077 C20,20.3153846 21.3153846,21.5384615 22.9346154,21.5384615 L28.8076923,21.5384615 Z" id="Shape-Copy" fill="#9EE1F8"></path>
             </g>

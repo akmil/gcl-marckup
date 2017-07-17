@@ -27,12 +27,24 @@
     img {
       width: 36px;
       height: 24px;
+      float: left;
+      max-width: 25%;
     }
     .puny-vs {
       color: $iron;
+      float: left;
+      max-width: 25%;
+      line-height: 20px;
     }
     .user-name {
       font-size: $size-links-small;
+      width: 30%;
+      float: left;
+      text-align: left;
+      margin: 0 5px;
+      &:first-child {
+        text-align: right;
+      }
     }
     .date-time,
     .date {

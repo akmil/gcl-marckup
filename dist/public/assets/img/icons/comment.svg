@@ -18,10 +18,6 @@
     <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="UI-Elements" transform="translate(-50.000000, -1461.000000)">
             <g id="Lower-Line" transform="translate(30.000000, 1453.000000)">
-                <g id="Rectangle-3-Copy-16">
-                    <use fill="#292E33" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                </g>
                 <use id="Comment" stroke="#98D9EF" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
             </g>
         </g>
