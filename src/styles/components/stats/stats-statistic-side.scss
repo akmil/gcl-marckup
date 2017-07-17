@@ -239,23 +239,25 @@
   }
 }
 
+$multiply:  0.57735;
+
 .stats-radial-diagram {
   .hexagon-wrapper {
     text-align: center;
     position: relative;
-    margin: 30px auto 30px;
-    height: 80px;
+    margin: -20px auto 0;
+    height: 140px;
     width: 140px;
   }
   .hexagon {
     height: 100%;
-    width: calc(100%);
+    width: calc(100% * 0.57735);
     display: inline-block;
-    transform: rotate(30deg);
+    //transform: rotate(30deg);
     &:before {
       position: absolute;
       top: 0;
-      right: calc((100% / 2) - ((100%) / 2));
+      right: calc((100% / 2) - ((100% * 0.57735) / 2));
       background-color: inherit;
       height: inherit;
       width: inherit;
@@ -265,7 +267,7 @@
     &:after {
       position: absolute;
       top: 0;
-      right: calc((100% / 2) - ((100%) / 2));
+      right: calc((100% / 2) - ((100% * 0.57735) / 2));
       background-color: inherit;
       height: inherit;
       width: inherit;
